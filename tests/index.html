@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SimpleSPA</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<div id="content">
+			<header>
+				<nav>
+					<ul>
+						<li><a href="index.html"><strong>Home</strong></a></li>
+						<li><a href="page1.html">Page 1</a></li>
+					</ul>
+				</nav>
+			</header>
+			<main>
+				<h1>SimpleSPA</h1>
+				<p>Lorem ipsum sit dolor amet</p>
+                <ul>
+                    <li><a href="404.html">404</a></li>
+                    <li><a href="#content">#content</a></li>
+                    <li><a href="page1.html" target="_blank">Page 1 (new tab)</a></li>
+                    <li><a href="https://cyve.fr">https://cyve.fr</a></li>
+                </ul>
+				<form method="get" action="search.php">
+					<input type="text" name="q">
+					<button type="submit">Search</button>
+				</form>
+				<form method="post" action="register.php">
+					<input type="text" name="name">
+					<button type="submit">Register</button>
+				</form>
+			</main>
+		</div>
+        <span style="position:absolute; top:0; right:0; width:10px; height:10px; background-color:red;"></span>
+		<script src="../dist/simple-spa.js"></script>
+		<script>
+            SimpleSpa.onContentLoaded = function () {
+                console.log('Content is fully loaded');
+            };
+        </script>
+	</body>
+</html>
